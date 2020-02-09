@@ -36,4 +36,4 @@ console.log(`${name} graduated. Average grade: ${average.toFixed(2)}`);
 
 }
 
-graduation(["Pesho", "5", "6", "5", "6", "3", "6", "5", "6", "6", "5", "5"]);
+graduation(["Pesho", "5", "6", "5", "6", "3", "6", "5", "6", "6", "5", "5","3"]);
