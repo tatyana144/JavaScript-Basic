@@ -7,35 +7,27 @@ function cooking(input) {
     for (let i = 1; i <= people; i++) {
         let name = input.shift();
         let command = input.shift();
-        let number = Number(input.shift());
         let cookie = 0;
         let cake = 0;
         let waffles = 0;
 
         while (command !== "Stop baking!") {
+            let number = Number(input.shift());
+            bake += number;
 
             if (command === "cookies") {
-                cookie = number;
-                bake += cookie;
-                total += cookie * 1.5;
+                cookie += number;
+                total += number * 1.5;
             } else if (command === "cakes") {
-                cake = number;
-                bake += cake;
-                total += cake * 7.8;
+                cake += number;
+                total += number * 7.8;
             } else if (command === "waffles") {
-                waffles = number;
-                bake += waffles;
-                total += waffles * 2.3;
+                waffles += number;
+                total += number * 2.3;
             }
 
 
             command = input.shift();
-            if (command === "Stop baking!") {
-
-                break;
-            }
-
-            number = Number(input.shift());
 
         }
 
