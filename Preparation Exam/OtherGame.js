@@ -23,7 +23,7 @@ function game(input) {
         }
 
         if (end) {
-            console.log(`Congratulations! You won the game with a bullseye in ${counter} moves.`);
+            console.log(`Congratulations! You won the game with a bullseye in ${counter} moves!`);
             break;
         }
 
@@ -36,7 +36,7 @@ function game(input) {
     }
 
     if (firstpoints === 0) {
-        console.log(`Congratulations! You won the game in ${counter} moves.`);
+        console.log(`Congratulations! You won the game in ${counter} moves!`);
     }
 
 }

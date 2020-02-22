@@ -12,30 +12,30 @@ function game(input) {
 
 
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 1; i <= countGame; i++) {
         gameName = input.shift();
-        points = Number(input.shift());
+        let points = Number(input.shift());
 
         if (gameName === "volleyball") {
-            pointV = points + (points * 0.07);
+            pointV += points + (points * 0.07);
             counterV++;
         } else if (gameName === "tennis") {
-            pointT = points + (points * 0.05);
+            pointT += points + (points * 0.05);
             counterT++;
         } else if (gameName === "badminton") {
-            pointB = points + (points * 0.02);
+            pointB += points + (points * 0.02);
             counterB++;
         }
     }
-    let averageV = (pointV / counterV);
-    let averageT = (pointT / counterT);
-    let averageB = (pointB / counterB);
-    let total = Math.floor(averageB + averageT + averageV);
+    let averageV = Math.floor(pointV / counterV);
+    let averageT = Math.floor(pointT / counterT);
+    let averageB = Math.floor(pointB / counterB);
+    let total = Math.floor(pointT + pointV + pointB);
 
     if (averageV >= 75 && averageT >= 75 && averageB >= 75) {
-        console.log(`Congatulations, ${gamerName}! You won the cruise games with ${total} points. `);
+        console.log(`Congratulations, ${gamerName}! You won the cruise games with ${total} points. `);
     } else {
-        console.log(`Sorry, ${gamerName} you lost. Your points are only ${total}. `);
+        console.log(`Sorry, ${gamerName}, you lost. Your points are only ${total}. `);
 
     }
 
@@ -43,4 +43,11 @@ function game(input) {
 
 }
 
-game(["Pepi", 3, "volleyball", 78, "tennis", 98, "badminton", 105]);
+game([
+    'Annie', '5',
+    'badminton', '34',
+    'tennis', '76',
+    'badminton', '10',
+    'volleyball', '62',
+    'badminton', '56'
+]);

@@ -8,7 +8,7 @@ function money(input) {
     let saveMoneyForMonth = countMont * saveMoney;
     let percentFromHerMoney = (saveMoney * 100) / moneyPerMonth;
     console.log(`She can save ${percentFromHerMoney.toFixed(2)}%`)
-    console.log(saveMoneyForMonth)
+    console.log(saveMoneyForMonth.toFixed(2))
 
 }
 money([1500, 3, 800])
